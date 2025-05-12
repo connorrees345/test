@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Columbus PMS Clone</title>
+    <title>Columbus PMS Clone - Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -29,33 +29,26 @@
             margin: 10px 5px;
         }
         .top-nav {
-            background-color: #003366;
-            color: white;
-            padding: 10px;
             display: none; /* Hidden by default */
-            justify-content: space-around;
         }
-        .top-nav a {
-            color: white;
-            text-decoration: none;
-            padding: 8px 15px;
+        .logo {
+            text-align: center;
+            margin-top: 40px;
         }
-        .top-nav a:hover {
-            background-color: #0055a5;
-            border-radius: 4px;
+        .logo img {
+            width: 250px;
+            max-width: 80%;
         }
     </style>
 </head>
 <body>
 
     <div class="top-nav" id="navbar">
-        <a href="#">Home</a>
-        <a href="#">Stock</a>
-        <a href="#">Settings</a>
-        <a href="#">Reports</a>
-        <a href="#">EPS</a>
-        <a href="#">Accuracy</a>
-        <a href="#">Logout</a>
+        <!-- Hidden nav if needed later -->
+    </div>
+
+    <div class="logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Boots_logo.svg/512px-Boots_logo.svg.png" alt="Logo">
     </div>
 
     <div class="login-box" id="loginBox">
@@ -68,9 +61,8 @@
 
     <script>
         function login() {
-            // Simulated login success
-            document.getElementById('loginBox').style.display = 'none';
-            document.getElementById('navbar').style.display = 'flex';
+            // Simulate login redirect
+            window.location.href = "dashboard.html";
         }
     </script>
 
