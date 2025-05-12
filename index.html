@@ -1,70 +1,105 @@
+# HTML and CSS reconstruction of the login page to visually match the provided screenshot
+
+html_exact_login_clone = """
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Columbus PMS Clone - Login</title>
+    <title>Kolumbus Login</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #002f6c, #ffffff);
             margin: 0;
             padding: 0;
+            font-family: Tahoma, sans-serif;
+            background: linear-gradient(to bottom, #0a1b40 20%, #6ca8e1 80%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: #000;
         }
-        .login-box {
-            background: white;
-            width: 300px;
-            margin: 100px auto;
+        .login-container {
+            width: 340px;
+            background-color: #f4f4f4;
+            border: 1px solid #ccc;
+            box-shadow: 0px 0px 8px #00000050;
             padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px #00000050;
+            position: relative;
+        }
+        .login-container h2 {
+            background-color: #000;
+            color: white;
+            padding: 8px;
+            font-size: 16px;
+            margin: 0 0 20px 0;
+        }
+        .login-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        .login-container input {
+            width: calc(100% - 20px);
+            padding: 8px 10px;
+            margin-bottom: 15px;
+            border: 1px solid #999;
+        }
+        .login-container button {
+            float: right;
+            padding: 6px 14px;
+        }
+        .login-footer {
+            position: absolute;
+            bottom: 40px;
             text-align: center;
+            font-size: 10px;
+            color: #ccc;
+            width: 100%;
         }
-        .login-box input {
-            width: 90%;
-            margin: 10px 0;
-            padding: 10px;
+        .main-buttons {
+            position: absolute;
+            top: 68%;
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
         }
-        .login-box button {
-            padding: 10px 20px;
-            margin: 10px 5px;
+        .main-buttons button {
+            padding: 10px 16px;
+            font-weight: bold;
+            border: none;
+            color: white;
+            cursor: pointer;
         }
-        .top-nav {
-            display: none; /* Hidden by default */
+        .offline-btn {
+            background-color: red;
         }
-        .logo {
-            text-align: center;
-            margin-top: 40px;
-        }
-        .logo img {
-            width: 250px;
-            max-width: 80%;
+        .close-btn {
+            background-color: #333;
         }
     </style>
 </head>
 <body>
-
-    <div class="top-nav" id="navbar">
-        <!-- Hidden nav if needed later -->
-    </div>
-
-    <div class="logo">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Boots_logo.svg/512px-Boots_logo.svg.png" alt="Logo">
-    </div>
-
-    <div class="login-box" id="loginBox">
+    <div class="login-container">
         <h2>Online Login</h2>
-        <input type="text" id="username" placeholder="Username" required><br>
-        <input type="password" id="password" placeholder="Password" required><br>
-        <button onclick="login()">Login</button>
-        <button>Go to Offline Login</button>
+        <label>Username*</label>
+        <input type="text" placeholder="">
+        <label>Password*</label>
+        <input type="password" placeholder="">
+        <button onclick="window.location.href='dashboard.html'">Login</button>
     </div>
 
-    <script>
-        function login() {
-            // Simulate login redirect
-            window.location.href = "dashboard.html";
-        }
-    </script>
+    <div class="main-buttons">
+        <button class="offline-btn">Go To Offline Login Page</button>
+        <button class="close-btn">Close</button>
+    </div>
 
+    <div class="login-footer">
+        Columbus PMS software is owned by Walgreens Boots Alliance... Unauthorized access to this system is an offence.
+    </div>
 </body>
 </html>
+"""
+
+from IPython.display import HTML
+display(HTML(html_exact_login_clone))
