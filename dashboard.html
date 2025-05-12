@@ -1,1 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prescription Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .top-nav {
+            background-color: #003366;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .top-nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+        .top-nav a:hover {
+            background-color: #0055a5;
+            border-radius: 4px;
+        }
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .left-panel {
+            flex: 1 1 65%;
+        }
+        .right-panel {
+            flex: 1 1 30%;
+            background: #fff;
+            border: 1px solid #ccc;
+            margin-left: 20px;
+            padding: 15px;
+        }
+        .search-bar {
+            margin-bottom: 15px;
+        }
+        .search-bar input {
+            width: 50%;
+            padding: 8px;
+        }
+        .search-bar button {
+            padding: 8px 12px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 6px;
+            text-align: left;
+            font-size: 14px;
+        }
+        th {
+            background-color: #e0e0e0;
+        }
+        .actions {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .actions button {
+            margin: 5px;
+            padding: 6px 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-nav">
+        <a href="#">Home</a>
+        <a href="#">Stock</a>
+        <a href="#">Settings</a>
+        <a href="#">Reports</a>
+        <a href="#">EPS</a>
+        <a href="#">Logout</a>
+    </div>
 
+    <div class="container">
+        <div class="left-panel">
+            <div class="search-bar">
+                <input type="text" placeholder="Search Patient or Prescription">
+                <button>Search</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date/Time</th>
+                        <th>Title</th>
+                        <th>First Name</th>
+                        <th>Surname</th>
+                        <th>Address</th>
+                        <th>Pref.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>12/05/2025 12:56:13</td>
+                        <td>Mrs</td>
+                        <td>THALIA</td>
+                        <td>WITTS</td>
+                        <td>98 Alfred Street CF24</td>
+                        <td>FRPS</td>
+                    </tr>
+                    <tr>
+                        <td>12/05/2025 12:56:10</td>
+                        <td>Mrs</td>
+                        <td>THALIA</td>
+                        <td>WITTS</td>
+                        <td>98 Alfred Street CF24</td>
+                        <td>FRPS</td>
+                    </tr>
+                    <tr>
+                        <td>12/05/2025 12:53:22</td>
+                        <td>Miss</td>
+                        <td>Rachael</td>
+                        <td>Russell</td>
+                        <td>Flat 1 CF24 3QB</td>
+                        <td>FRPS</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="right-panel">
+            <h3>Prescription Breakdown</h3>
+            <p><strong>Patient:</strong> Thalia Witts</p>
+            <p><strong>Drug:</strong> Betamethasone valerate 0.1%</p>
+            <p><strong>Qty:</strong> 100</p>
+            <p><strong>Directions:</strong><br>Apply Thinly Twice A Day for 1 week,<br>then once a day for 1 week</p>
+            <div class="actions">
+                <button>Edit</button>
+                <button>Delete Line</button>
+                <button>Bag Label</button>
+                <button>Reprint</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
